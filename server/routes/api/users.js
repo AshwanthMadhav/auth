@@ -1,13 +1,9 @@
 const express = require('express')
 const router = express.Router()
-
+const userControllerApis = require('../../controller/api/userApis')
 
 // getting api contains api/users
-router.get('/', (req, res) => {
-    return res.status(200).json({
-        success: true
-    })
-})
+router.get('/', userControllerApis.index)
 
 // getting api contains api/users/login
 router.get('/', () => { })
